@@ -10,4 +10,10 @@ PLAYER_RADIUS = 20
 PLAYER_TURN_SPEED = 300
 PLAYER_SPEED = 200
 
+<<<<<<< HEAD
 HIT_CONTACT_BUFFER = 10
+=======
+HIT_CONTACT_BUFFER = 10
+
+SHOT_RADIUS = 5
+>>>>>>> c6a46ae (collision detection added with a variable to allow some forgiveness)
