@@ -1,5 +1,8 @@
 import pygame
 
+from constants import HIT_CONTACT_BUFFER
+
+
 class CircleShape(pygame.sprite.Sprite):
     def __init__(self, x, y, radius):
         if hasattr(self, "containers"):
@@ -18,4 +21,10 @@ class CircleShape(pygame.sprite.Sprite):
     def update(self, dt):
         # sub-classes must override
         pass
+
+    def hit(self, circle_shape):
+        if self.position.distance_to(circle_shape.position) <= (circle_shape.radius + self.radius) - HIT_CONTACT_BUFFER:
+            return True
+        else:
+            return False
 
