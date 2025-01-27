@@ -36,6 +36,11 @@ def main():
             p.draw(screen)
         for p in updatable:
             p.update(dt)
+        for a in asteroids:
+            for s in shots:
+                if a.hit(s):
+                    a.split()
+                    s.kill()
 
         for a in asteroids:
             if a.hit(player):
